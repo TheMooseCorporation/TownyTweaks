@@ -27,7 +27,7 @@ public class ResearchCommand extends CommandBase {
             "/research sync - Synchronize Municipality research\n" +
             "/research remove <username> - Removes  a researcher\n" +
             "/research add <username> - Add a researcher\n" +
-            "/research list - Lists all researchers\n";
+            "/research list - Lists all researchers";
 
     // For every x citizens in a municipality there is 1 researcher slot
     int researcherRatio = 2;
@@ -65,7 +65,7 @@ public class ResearchCommand extends CommandBase {
     @Override
     public boolean isUsernameIndex(String[] args, int index) {
         if (index != 1) return false;
-        if (args.length == 1) {
+        if (args.length >= 1) {
             final String arg0 = args[0].toLowerCase();
             if (arg0 == "remove" || arg0 == "add")
                 return true;

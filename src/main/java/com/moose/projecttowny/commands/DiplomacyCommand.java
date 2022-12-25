@@ -33,7 +33,7 @@ public class DiplomacyCommand extends CommandBase {
             "/diplomacy declare [war/peace] <municipality ID> - Declare war or peace\n" +
             "/diplomacy mayor - Unlock Mayoral Duties questline\n" +
             "/diplomacy online - List all online municipalities\n" +
-            "/diplomacy wars - List all active wars you have\n";
+            "/diplomacy wars - List all active wars you have";
 
     @Override
     public String getName() {
@@ -115,7 +115,7 @@ public class DiplomacyCommand extends CommandBase {
                             if (!playerCap.isMayorOf(playerCap.getMunicipality()))
                                 Print.chat(sender, "Only Municipality mayors can declare war");
 
-                            if (playerCap.getMunicipality().getId() == Integer.parseInt(args[1])) {
+                            if (playerCap.getMunicipality().getId() == id) {
                                 Print.chat(sender, "You can't declare war on yourself");
                                 return;
                             }
@@ -155,7 +155,7 @@ public class DiplomacyCommand extends CommandBase {
                             if (!playerCap.isMayorOf(playerCap.getMunicipality()))
                                 Print.chat(sender, "Only Municipality mayors can declare war");
 
-                            if (playerCap.getMunicipality().getId() == Integer.parseInt(args[1])) {
+                            if (playerCap.getMunicipality().getId() == id) {
                                 Print.chat(sender, "You aren't at war with yourself");
                                 return;
                             }
