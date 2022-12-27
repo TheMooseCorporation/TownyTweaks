@@ -11,6 +11,6 @@
   "credits": "Developed by Moose of the Project Towny Development Team",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["fsmm", "fcl", "states", "gamestages"]
 }
 ]

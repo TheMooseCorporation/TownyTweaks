@@ -1,7 +1,6 @@
-package com.moose.projecttowny.data;
+package com.moose.projecttowny;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -11,25 +10,25 @@ import net.fexcraft.mod.states.data.Municipality;
 import net.fexcraft.mod.states.data.root.ExternalData;
 
 
-public class Data implements ExternalData{
+public class Data implements ExternalData {
 
     public ArrayList<Integer> activeWars = new ArrayList<>();
 
-    public ArrayList<Integer> getActiveWars(Municipality mun) {
+    public static ArrayList<Integer> getActiveWars(Municipality mun) {
         Data externalData = mun.getExternalData("project_towny_tweaks");
         return externalData.activeWars;
     }
 
     public ArrayList<String> researchers = new ArrayList<>();
 
-    public ArrayList<String> getResearchers(Municipality mun) {
+    public static ArrayList<String> getResearchers(Municipality mun) {
         Data externalData = mun.getExternalData("project_towny_tweaks");
         return externalData.researchers;
     }
 
     public ArrayList<String> technologies = new ArrayList<>();
 
-    public ArrayList<String> getTechnologies(Municipality mun) {
+    public static ArrayList<String> getTechnologies(Municipality mun) {
         Data externalData = mun.getExternalData("project_towny_tweaks");
         return externalData.technologies;
     }
